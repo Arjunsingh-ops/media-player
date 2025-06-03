@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Media Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player-container">
+    <div class="media-display">
+      <video id="videoPlayer" style="display: none;"></video>
+      <div class="audio-visualizer" id="audioVisualizer">
+        <div class="audio-icon">🎵</div>
+        <div class="audio-title">Select a media file to play</div>
+      </div>
+    </div>
+
+    <div class="file-input-wrapper">
+      <input type="file" id="mediaFile" class="file-input" accept="audio/*,video/*">
+      <div class="file-input-button">📁 Choose Media File</div>
+    </div>
+
+    <div class="controls">
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="time-display">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+      <div class="control-buttons">
+        <button class="control-btn" id="prevBtn">⏮</button>
+        <button class="control-btn play-pause" id="playPauseBtn">▶</button>
+        <button class="control-btn" id="nextBtn">⏭</button>
+        <button class="control-btn" id="muteBtn">🔊</button>
+      </div>
+      <div class="volume-container">
+        <span class="volume-icon">🔉</span>
+        <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="50">
+        <span class="volume-icon">🔊</span>
+      </div>
+    </div>
+
+    <div class="media-info" id="mediaInfo">
+      <h3 id="fileName">No file selected</h3>
+      <p id="fileSize">Size: --</p>
+      <p id="fileType">Type: --</p>
+      <p id="fileDuration">Duration: --</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
